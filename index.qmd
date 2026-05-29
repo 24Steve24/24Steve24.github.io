@@ -6,13 +6,13 @@ about:
   template: trestles
   links: 
     - text: LinkedIn
-    href: https://www.linkedin.com/in/stephen-bond-031a44329/?skipRedirect=true
-    target: _blank
+      href: https://www.linkedin.com/in/stephen-bond-031a44329/?skipRedirect=true
+      target: _blank
     - text: Github
-    href: https://github.com/24Steve24
-    target: _blank
+      href: https://github.com/24Steve24
+      target: _blank
     - text: Email
-    href: stephenbond@ucsb.edu
+      href: stephenbond@ucsb.edu
     
     
 ---
