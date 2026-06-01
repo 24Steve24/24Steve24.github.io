@@ -7,18 +7,18 @@ about:
   image-shape: round
   image-width: 17em
   links: 
-    - text: "{{< fa brands linkedin >}} LinkedIn"
+    - text: "LinkedIn"
       href: https://www.linkedin.com/in/stephen-bond-031a44329/?skipRedirect=true
       target: _blank
-    - text: "{{< fa brands github >}} Github"
+    - text: "Github"
       href: https://github.com/24Steve24
       target: _blank
-    - text: "{{< fa envelope >}} Email"
-      href: stephenbond@ucsb.edu
+    - text: "Email"
+      href: mailto:stephenbond@ucsb.edu
     
     
 ---
-#Welcome!
+# Welcome!
 
 Hello, thanks for stopping by my website! My name is Stephen, a current third year Environmental Studies major with a concentration in Physical Geography at UCSB. 
 
@@ -31,3 +31,8 @@ This website acts as a collection of my academic and professional experiences, p
 While I still am in undergad, I currently work for the Santa Barbara County Association of Governments as a GIS intern, the Isla Vista Community Service district as a Sustainability Staff Lead, and Associated Students Recycling as a route Rider. I learned from these positions that I find the my work most meaningful when it is rooted in local government and community initiatives. Seeing hard work overtime directly benefit a place so close to home is what drives me to continue making advancements to our community and bolster environmental initiatives. 
 
 When I am not too busy working, I love volunteering for Sprout Up a national nonprofit focused on providing free environmental education to Title I elementary schools. I also find myself enjoying a good board game with my friends and family, exploring the outdoors, or traveling. 
+
+# Education
+**Bachelor of Science, Environmental Studies, 2027**
+University of California, Santa Barbara
+
