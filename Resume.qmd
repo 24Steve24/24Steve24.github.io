@@ -2,4 +2,7 @@
 title: "Resume"
 format: html
 ---
+Over the past few years, I have been extremely fortunate to experience so many great opportunities. Feel free to learn more about them in my attached resume below, and if you have any expanding questions don't be afraid to reach out!
 
+
+<iframe src ="Stephen_Bond_Resume.pdf" width="100%" height="800px"></iframe>
