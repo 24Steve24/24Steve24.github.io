@@ -1,5 +1,52 @@
 ---
-title: "About Me"
+title: "About Me!"
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: bottom
+  loop: True
+  css-class: "styles.css"
 ---
+# Personal Life
 
-About this site
+## Friends and Family
+I grew up in Walpole, Massachusetts, a small suburban town forty minutes south of Boston. My immediate family consists of myself, my two brothers, and my parents, but I was fortunate enough to live close to my grandparents, aunts and uncles, and cousins.
+
+![My Family](PNGS/Family_Wedding.jpg){group="gallery"}
+
+![My Cousins and I at Cape Cod](PNGS/Cousin_Beach.jpg){group="gallery"}
+
+Along with my Family, I have a a wonderful group of friends in Santa Barbara and Walpole. Some of which I have known since middle school to some that I met this year.
+
+![Hometown Friends](PNGS/Walpole_Friends.jpg){group="gallery"}
+
+![Santa Barbara Friends](PNGS/Dinner with Friends.jpeg){group="gallery"}
+
+## Hobbies
+
+Outside of time with friends and family, you can find me at any live music event. Whether it be a small band show in Isla Vista or a stadium event, concerts help me relax and unwind.
+
+![Charli XCX, San Diego 2024](PNGS/Charli.png){group="gallery"}
+
+![Omar Apollo, Santa Barbara 2024](PNGS/Omar.png){group="gallery"}
+
+![Faye Webster, Boston 2024](PNGS/Faye_Webster.png){group="gallery"}
+Additionally, I also discovered a love for travelling after studying abroad in Copenhagen. I was fortunate enought to visit countries ranging from Germany, Italy, Spain, Sweden, and Czechia. I made great friends and memories along the way, and I hope I can travel again soon to make even more memories.
+
+![Lecce, Italy](PNGS/Walking_Italy.jpg){group="gallery"}
+
+![Prague, Czechia](PNGS/Prague.JPEG){group="gallery"}
+
+![Nyhavn Copenhagen, Denmark](PNGS/Copenhagen.JPG){group="gallery"}
+
+![Christmas Market Copenhagen, Denmark](PNGS/Christmas Market.JPG){group="gallery"}
+
+
+
+# Professional Life
+
+## Education
+
+## Career Opportunites and Goals
+
+# Current Obsessions
