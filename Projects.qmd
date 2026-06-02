@@ -1,5 +1,11 @@
 ---
 title: "My Projects"
 format: html
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: true
+page-layout: full
 ---
 
