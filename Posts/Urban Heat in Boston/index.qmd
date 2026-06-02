@@ -1,0 +1,17 @@
+---
+title: "Boston's Heat, Vulnerable Communities, and Open Space"
+categories: [GIS]
+image: Boston.jpg
+draft: false
+---
+
+# Description
+During my third year at UCSB, I participated in the course GIS for Environmental Application. This course culminated in a group project where we were able to conduct GIS research on an area of our own interest. This opportunity allowed me to explore the relationship between Boston's predicted heat, the spatial density of communities vulnerable to extreme heat, and open space across the city. This ArcGIS Storymap highlights the date utilized, the spatial and tabular geoprocessing, and the results we found.
+
+[Click Here to Visit the StoryMap](https://storymaps.arcgis.com/stories/d9719b05f31a45749753755a9ba426ce)
+
+<iframe src="https://storymaps.arcgis.com/stories/d9719b05f31a45749753755a9ba426ce" 
+width="90%" 
+height="600px"
+allowfullscreen>
+<i/frame>
