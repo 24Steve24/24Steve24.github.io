@@ -6,5 +6,68 @@ image: Plastic_Film.jpg
 draft: false
 ---
 
+During my second year of undergrad, I participated in a 9 month program called the Environmental Leadership Incubator. This program provided student's with the resources and support to undertake an environmental related passion project of their choosing. 
+
+Along with my project partner, Ella Graban, I focused on establishing a thin film recycling program for the Isla Vista and UCSB community. This plastic is commonly used within our society, seen as any form of bread bags, pallet wrap, and even some forms of plastic bags, however it is not conventionally recycled through modern waste facilities. This leads to large amounts of this plastic building up in our landfills, natural environment, and even our bodies.
+
+Through a partnership with Planet Protectors, based out of Downtown Santa Barbara we were able to start collecting this plastic from local sources and even directly from the community through weekly pickups and donation drop-off locations. After collecting within our own community, we would deliver it to their location downtown where it would eventually be transported to be melted into smaller pellets and later turned into plastic decking and chairs through the company treks.
+
+Below is an interactive map depicting the locations around UCSB and Isla Vista where we had weekly pickups and drop-off sites.
+
+```{r}
+#| label: load in packages
+#| message: false
+#| warning: false
+#| code-fold: true
+
+# loading necessary library
+library(sf) # spatial data handling
+library(leaflet) # interactive map creation
+library(htmltools) # HTML rendering for labels and popups
+library(janitor) # cleaning columns
+library(tidyverse) # data manipulation and piping
+library(readr) # read csv with data
+library(here) # locate files
+
+```
+
+```{r}
+#| label: Create Map
+#| message: false
+#| warning: false
+#| code-fold: true
+
+# load csv and clean columns
+Plastic <- read_csv(here("Posts", "ELI", "ELI_Map.csv")) |>
+            clean_names()
+
+# set colors
+pal <- colorFactor(
+  palette = c("skyblue", "coral"),
+  levels = c("Pick Up", "Drop Off"))
+
+# build interactive map for ELI data
+leaflet(data = Plastic) |>
+  addProviderTiles("Esri.WorldImagery") |> # satellite imagery background from Esri
+  
+  # interactive marker that show location in popup
+  addCircleMarkers(~longitude,
+             ~latitude,
+             color = ~pal(type_of_location),
+             fillColor = ~pal(type_of_location),
+             fill = TRUE,
+             radius = 8,
+             fillOpacity = 0.9,
+             stroke = FALSE,
+             popup = ~paste(location, "<br>", type_of_location)) |>
+  #add legend for colors
+  addLegend(
+    pal = pal,
+    values = ~type_of_location,
+    title = "Type of Location"
+  )
+  
+
+```
 
 
