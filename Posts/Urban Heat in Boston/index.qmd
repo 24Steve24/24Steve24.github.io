@@ -10,7 +10,7 @@ During my third year at UCSB, I participated in the course GIS for Environmental
 
 [Click Here to Visit the StoryMap](https://storymaps.arcgis.com/stories/d9719b05f31a45749753755a9ba426ce)
 
-<iframe src="https://storymaps.arcgis.com/stories/d9719b05f31a45749753755a9ba426ce" 
+<iframe src="Heat_Map.pdf" 
 width="90%" 
 height="600px"
 allowfullscreen>
