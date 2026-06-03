@@ -1,0 +1,143 @@
+---
+title: "ENVS Statistics Midterm"
+author: 
+  - name: Stephen Bond
+    affiliation: UCSB Environmental Studies
+categories: [Coding]
+image: bee.jpeg
+draft: false
+---
+
+# Midterm for ENVS 193DS: Statistical Analysis and Communicating Findings
+
+## Reproducing an Analysis
+Below I have included my code and text from the third question of my Data Science midterm, where I explore and recreate an analysis of the difference in median Black Queen Cell Virus pathogen load of Bombus impatiens workers in valley, edge, and forest environments. I will first identify the variables, the test type, and hypotheses. Then I will clean the data and summarize a tabular display. Finally, I will run the associated statistical test and effectively communicate the findings.
+
+### a. Variables
+- The response variable is pathogen load, specifically Deformed Wing Virus, Black Queen Cell Virus, Vairimorpha bombi, and Crithidia bombi measured in Bombus impatiens worker. This variable would be continuous.
+
+- The predictor variable was the habitat type and the landscape variables. The groups for the habitat type were valley, edge, and forest, where as, the landscape variables ranged from non-forest natural, grassland/pasture, Developed open, Developed, Barren, Open water, crops, and to forest.
+
+- The response variables were measured by performing quantitative PCRs on pooled abdomens of three B. impatiens workers per sample and analyzing 1-3 pools per site. These measurements then gave clear data on pathogen load within the sample(Gratton, E., et al., 2023. “Local habitat type influences bumble bee pathogens loads and bee species distributions.” Environmental Entomology 52:3 May 2023, paragraph 10 of the paper, paragraph 3 of the methods section, or paragraph 1 of the pathogen quantification section).
+
+### b. Test Type
+
+The test that the researchers used was a Kruskal-Wallis test and then a Dunn post-hoc test (Gratton, E., et al., 2023. “Local habitat type influences bumble bee pathogens loads and bee species distributions.” Environmental Entomology 52:3 May 2023, paragraph 18 of the paper, paragraph 11 of the methods section, which is also paragraph 1 of the statistical analysis
+portion)
+
+### c. Hypotheses
+
+$H_O$: There is no difference in the median BQCV pathogen load of Bombus impatiens worker in valleys, edges, and forests.
+
+$H_A$: There is a difference in the median BQCV pathogen load of Bombus impatiens worker in valleys, edges, and forests.
+
+### d. Clean and Organizing Data
+
+```{r}
+#| label: Read in Packages and data
+#| message: false
+#| warning: false
+#| code-fold: true
+#read in tidyverse
+library(tidyverse)
+# read in janitor
+library(janitor)
+# read in flextable
+library(flextable)
+# read in rstatix
+library (rstatix)
+# read in here package
+library(here)
+# read in data
+bee_pathogens <- read_csv(here("Posts", "ENVS_Midterm", "bee-pathogens.csv"))
+```
+
+
+```{r}
+#| code-fold: true
+#create object bee_pathogens_clean
+bee_pathogens_clean <- bee_pathogens |>
+  # clean names, making lower case and underscores
+  clean_names() |>
+  # remove na values
+  drop_na() |>
+  # keep only site type and BQCV columns
+  select(site_type_x, bqcv) |>
+  # rename site type to habitat
+  rename(habitat = site_type_x)
+#display 10 rows from bee_pathogens_clean
+slice_sample(bee_pathogens_clean, n = 10, by = NULL, weight_by = NULL, 
+             replace = FALSE)
+```
+
+### e. Summarizing and Table Displays
+
+```{r}
+#| code-fold: true
+# create object bee_pathogens_summary
+bee_pathogens_summary <- bee_pathogens_clean |>
+  # group by habitat type
+  group_by(habitat) |>
+  # start the summary for bee_pathogen_summary data
+  summarize(
+    #calculate the median BQCV load
+    median_bqcv = round(median(bqcv), 1),
+    # calculate the number of observations
+    n = n())
+# display summary calculations with flextable
+flextable(bee_pathogens_summary) |>
+  # remove underscore and capitalize
+  set_header_labels(median_bqcv = "Median BQCV", habitat = "Habitat", 
+                    n = "Sample Size") |>
+  # autofit to fit titles on one line
+  autofit()
+```
+
+### f. Do a Test
+
+```{r}
+#| code-fold: true
+# start kruskal-wallis test
+kruskal.test(
+  # formula: bqcv load as a function of habitat
+  bqcv ~ habitat,
+  # data: clean bee pathogen data frame
+  data = bee_pathogens_clean
+)
+```
+
+### g. Do a Post-Hoc Test
+
+```{r}
+#| code-fold: true
+# start Dunn's Post-Hoc Test
+dunn_test(
+  #formula: bqcv ratings as a function of habitat
+  bqcv ~ habitat,
+  # data: clean bee pathogen data frame
+  data = bee_pathogens_clean
+)
+```
+
+### h. Calculate an Effect Size
+
+```{r}
+#| code-fold: true
+# start effect size calculation
+kruskal_effsize(
+  # formula: bqcv ratings as a function of habitat
+  bqcv ~ habitat,
+  # data: clean bee pathogen data frame
+  data = bee_pathogens_clean
+)
+```
+
+### i. Written Communication
+
+There was a moderate effect **($\eta^2$ = 0.102)** of habitat type on BQCV loads **(Fig. 2a. Kruskal-Wallis, $\chi^2$ = 9.82, df = 2, P = 0.007, $\alpha$ = 0.05)** with significant differences between the median values of valley **(n = 29, $\bar{x}$ = 7.6)** and forest **(n = 24, $\bar{x}$ = 5.0, $\chi^2$ = 9.82, Dunn's Test, z = -3.13, P-adj = 0.005)**. **While edge habitats had a greater median (n = 27, $\bar{x}$ = 6.3, $\chi^2$ = 9.82) than forest there was no difference found (Dunn's Test, z = -1.83, P-adj = 0.236), and while edge habitat median was less than valley median, no difference was found (Dunn's Test, z = 3.13, P-adj = 0.189)**
+
+# Complete Assignment
+
+[ENVS 193DS Midterm](Midterm.pdf)
+
+<iframe src="midterm.pdf" width  ="85%" height="500px"></iframe>
