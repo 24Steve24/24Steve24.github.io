@@ -48,16 +48,17 @@ pal <- colorFactor(
 
 # build interactive map for ELI data
 leaflet(data = Plastic) |>
-  addProviderTiles("Esri.WorldImagery") |> # satellite imagery background from Esri
+  addProviderTiles("Esri.WorldImagery") |> # Satalitte background
+  setView(lng = -119.846, lat = 34.413, zoom = 15) |> # set opening position 
   
   # interactive marker that show location in popup
-  addCircleMarkers(~longitude,
-             ~latitude,
+  addCircleMarkers(~latitude,
+             ~longitude,
              color = ~pal(type_of_location),
              fillColor = ~pal(type_of_location),
              fill = TRUE,
              radius = 8,
-             fillOpacity = 0.9,
+             fillOpacity = 1,
              stroke = FALSE,
              popup = ~paste(location, "<br>", type_of_location)) |>
   #add legend for colors
