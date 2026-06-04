@@ -9,20 +9,25 @@ lightbox:
 ---
 # Personal Life
 
-### Friends and Family
+Take this opportunity to learn a little bit more about me, my personal life, my career achievements and aspirations, and my current obsessions.
+
+
+## Friends and Family
 I grew up in Walpole, Massachusetts, a small suburban town forty minutes south of Boston. My immediate family consists of myself, my two brothers, and my parents, but I was fortunate enough to live close to my grandparents, aunts and uncles, and cousins.
 
-![My Family](PNGS/Family_Wedding.jpg){group="gallery"}
+:::: {layout-nrow=1}
+![My Family](PNGS/Family_Wedding.jpg){group="Family&Friends" .lightbox width="50%"}
 
-![My Cousins and I at Cape Cod](PNGS/Cousin_Beach.jpg){group="gallery"}
+![My Cousins and I at Cape Code](PNGS/Cousin_Beach.jpg){group="Family&Friends" .lightbox width="50%"}
+::::
 
-Along with my Family, I have a a wonderful group of friends in Santa Barbara and Walpole. Some of which I have known since middle school to some that I met this year.
+Along with my family, I have a wonderful group of friends in Santa Barbara and Walpole. Some of which I have known since middle school and some I've only know a couple of years.
 
 ![Hometown Friends](PNGS/Walpole_Friends.jpg){group="gallery"}
 
 ![Santa Barbara Friends](PNGS/Dinner with Friends.jpeg){group="gallery"}
 
-### Hobbies
+## Hobbies
 
 Outside of time with friends and family, you can find me at any live music event. Whether it be a small band show in Isla Vista or a stadium event, concerts help me relax and unwind.
 
@@ -44,11 +49,11 @@ Additionally, I also discovered a love for travelling after studying abroad in C
 
 # Professional Life
 
-### Education
+## Education
 
 I currently am attending the University of California, Santa Barbara. I am pursing a Bachelor of Science in Environmental Studies with a concentration in Physical Geography. I have taken courses ranging from introductory sciences series like chemistry and physics to more defined upper division courses focused on renewable energy systems and GIS applications within the environmental field.
 
-### Career Opportunites and Goals
+## Career Opportunites and Goals
 
 I currently am interning at the Santa Barbara County Association of Governments, aiding with technical GIS applications for our counties transportation routes and systems. My tasks range from constructing maps depictining demographics and transportations across Santa Barbara County, building web based applications used as guidance for county supervisor's decisions, and conducting GIS governance for the organization's data hub. It has been an amazing opprotunity to expand my familairty with Esri Suite and learn more about the intricasies associated transportation planning on a county wide level.
 
@@ -64,17 +69,17 @@ This is a small section to share an ever updating list of my current obsessions.
 
 Last Updated: 2026-05-31
 
-### Current Favorite Songs
+## Current Favorite Songs
 - Olivia Rodrigo: The Cure
 - Say Now: Millions-Unplugged
 - Untouched: The Veronicas
 
-### Movies I'm Excited For
+## Movies I'm Excited For
 - Backrooms, Directed by Kane Parsons
 - Stop that Train, Directed by Adam Shankman
 - The Hunger Games Sunrise On the Reaping, Directed by Francis Lawrence
 
-### Trader Joe's Finds
+## Trader Joe's Finds
 - Brookie Caramel Candy Clusters
 - Italian-Style Wedding Soup
 - Frozen Kimbap
