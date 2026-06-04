@@ -1,5 +1,10 @@
 ---
-title: "Some Amazing Recipes!"
-format: html
+title: "Resteraunt Reviews"
+listing:
+  contents: Reviews
+  sort: "date desc"
+  type: grid
+  categories: true
+page-layout: full
 ---
 
