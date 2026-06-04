@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me! – Stephen Bond</title>
+<title>Resteraunt Reviews – Stephen Bond</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -41,9 +43,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-c8f389fcddcd31c77ea7c65898c5a719.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +70,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.scss">
 </head>
@@ -100,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About Me!</span></a>
   </li>  
   <li class="nav-item">
@@ -108,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">My Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Reviews.html"> 
+    <a class="nav-link active" href="./Reviews.html" aria-current="page"> 
 <span class="menu-text">Resteraunt Reviews</span></a>
   </li>  
   <li class="nav-item">
@@ -127,35 +184,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#personal-life" id="toc-personal-life" class="nav-link active" data-scroll-target="#personal-life">Personal Life</a>
-  <ul class="collapse">
-  <li><a href="#friends-and-family" id="toc-friends-and-family" class="nav-link" data-scroll-target="#friends-and-family">Friends and Family</a></li>
-  <li><a href="#hobbies" id="toc-hobbies" class="nav-link" data-scroll-target="#hobbies">Hobbies</a></li>
-  </ul></li>
-  <li><a href="#professional-life" id="toc-professional-life" class="nav-link" data-scroll-target="#professional-life">Professional Life</a>
-  <ul class="collapse">
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#career-opportunites-and-goals" id="toc-career-opportunites-and-goals" class="nav-link" data-scroll-target="#career-opportunites-and-goals">Career Opportunites and Goals</a></li>
-  </ul></li>
-  <li><a href="#current-obsessions" id="toc-current-obsessions" class="nav-link" data-scroll-target="#current-obsessions">Current Obsessions</a>
-  <ul class="collapse">
-  <li><a href="#current-favorite-songs" id="toc-current-favorite-songs" class="nav-link" data-scroll-target="#current-favorite-songs">Current Favorite Songs</a></li>
-  <li><a href="#movies-im-excited-for" id="toc-movies-im-excited-for" class="nav-link" data-scroll-target="#movies-im-excited-for">Movies I’m Excited For</a></li>
-  <li><a href="#trader-joes-finds" id="toc-trader-joes-finds" class="nav-link" data-scroll-target="#trader-joes-finds">Trader Joe’s Finds</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="S29yZWFu">Korean <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me!</h1>
+<h1 class="title">Resteraunt Reviews</h1>
 </div>
 
 
@@ -172,126 +208,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="personal-life" class="level1">
-<h1>Personal Life</h1>
-<section id="friends-and-family" class="level3">
-<h3 class="anchored" data-anchor-id="friends-and-family">Friends and Family</h3>
-<p>I grew up in Walpole, Massachusetts, a small suburban town forty minutes south of Boston. My immediate family consists of myself, my two brothers, and my parents, but I was fortunate enough to live close to my grandparents, aunts and uncles, and cousins.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Family_Wedding.jpg" class="lightbox" data-gallery="gallery" title="My Family"><img src="PNGS/Family_Wedding.jpg" class="img-fluid figure-img" alt="My Family"></a></p>
-<figcaption>My Family</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Cousin_Beach.jpg" class="lightbox" data-gallery="gallery" title="My Cousins and I at Cape Cod"><img src="PNGS/Cousin_Beach.jpg" class="img-fluid figure-img" alt="My Cousins and I at Cape Cod"></a></p>
-<figcaption>My Cousins and I at Cape Cod</figcaption>
-</figure>
-</div>
-<p>Along with my Family, I have a a wonderful group of friends in Santa Barbara and Walpole. Some of which I have known since middle school to some that I met this year.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Walpole_Friends.jpg" class="lightbox" data-gallery="gallery" title="Hometown Friends"><img src="PNGS/Walpole_Friends.jpg" class="img-fluid figure-img" alt="Hometown Friends"></a></p>
-<figcaption>Hometown Friends</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Dinner with Friends.jpeg" class="lightbox" data-gallery="gallery" title="Santa Barbara Friends"><img src="PNGS/Dinner with Friends.jpeg" class="img-fluid figure-img" alt="Santa Barbara Friends"></a></p>
-<figcaption>Santa Barbara Friends</figcaption>
-</figure>
-</div>
-</section>
-<section id="hobbies" class="level3">
-<h3 class="anchored" data-anchor-id="hobbies">Hobbies</h3>
-<p>Outside of time with friends and family, you can find me at any live music event. Whether it be a small band show in Isla Vista or a stadium event, concerts help me relax and unwind.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Charli.png" class="lightbox" data-gallery="gallery" title="Charli XCX, San Diego 2024"><img src="PNGS/Charli.png" class="img-fluid figure-img" alt="Charli XCX, San Diego 2024"></a></p>
-<figcaption>Charli XCX, San Diego 2024</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Omar.png" class="lightbox" data-gallery="gallery" title="Omar Apollo, Santa Barbara 2024"><img src="PNGS/Omar.png" class="img-fluid figure-img" alt="Omar Apollo, Santa Barbara 2024"></a></p>
-<figcaption>Omar Apollo, Santa Barbara 2024</figcaption>
-</figure>
-</div>
-<p><img src="PNGS/Faye_Webster.png" class="img-fluid" data-group="gallery" alt="Faye Webster, Boston 2024"> Additionally, I also discovered a love for travelling after studying abroad in Copenhagen. I was fortunate enought to visit countries ranging from Germany, Italy, Spain, Sweden, and Czechia. I made great friends and memories along the way, and I hope I can travel again soon to make even more memories.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Walking_Italy.jpg" class="lightbox" data-gallery="gallery" title="Lecce, Italy"><img src="PNGS/Walking_Italy.jpg" class="img-fluid figure-img" alt="Lecce, Italy"></a></p>
-<figcaption>Lecce, Italy</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Prague.JPEG" class="lightbox" data-gallery="gallery" title="Prague, Czechia"><img src="PNGS/Prague.JPEG" class="img-fluid figure-img" alt="Prague, Czechia"></a></p>
-<figcaption>Prague, Czechia</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Copenhagen.JPG" class="lightbox" data-gallery="gallery" title="Nyhavn Copenhagen, Denmark"><img src="PNGS/Copenhagen.JPG" class="img-fluid figure-img" alt="Nyhavn Copenhagen, Denmark"></a></p>
-<figcaption>Nyhavn Copenhagen, Denmark</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="PNGS/Christmas Market.JPG" class="lightbox" data-gallery="gallery" title="Christmas Market Copenhagen, Denmark"><img src="PNGS/Christmas Market.JPG" class="img-fluid figure-img" alt="Christmas Market Copenhagen, Denmark"></a></p>
-<figcaption>Christmas Market Copenhagen, Denmark</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="professional-life" class="level1">
-<h1>Professional Life</h1>
-<section id="education" class="level3">
-<h3 class="anchored" data-anchor-id="education">Education</h3>
-<p>I currently am attending the University of California, Santa Barbara. I am pursing a Bachelor of Science in Environmental Studies with a concentration in Physical Geography. I have taken courses ranging from introductory sciences series like chemistry and physics to more defined upper division courses focused on renewable energy systems and GIS applications within the environmental field.</p>
-</section>
-<section id="career-opportunites-and-goals" class="level3">
-<h3 class="anchored" data-anchor-id="career-opportunites-and-goals">Career Opportunites and Goals</h3>
-<p>I currently am interning at the Santa Barbara County Association of Governments, aiding with technical GIS applications for our counties transportation routes and systems. My tasks range from constructing maps depictining demographics and transportations across Santa Barbara County, building web based applications used as guidance for county supervisor’s decisions, and conducting GIS governance for the organization’s data hub. It has been an amazing opprotunity to expand my familairty with Esri Suite and learn more about the intricasies associated transportation planning on a county wide level.</p>
-<p>Additionally, I am a Sustainability Support Staff Lead at the Isla Vista Community Service District. I mainly support the districts compost opperations, doing hands on tasks like building piles and servicing drop off bins but I also schedule and conduct volunteer opportunites, oversee community outreach by tabling at certain events, and create operational material guides for future employees.</p>
-<p>I also work for Associated Students Recycling on UCSB campus as a Route Rider. In this position, I help facilitate on campus recycling to meet UCSB’s sustainability goals. While it might not be the most glamorous job, I have loved connecting with fellow UCSB students over a shared passion of enhancing the universities commitment to environmental stewardship.</p>
-<p>Finally, while not a paid position, I currently am acting as the Development Manager for Sprout Up UCSB. Sprout Up aims to provide free environmental science education to Title I elementary schools across the nation. We hope to foster not only a love for the environment but science in general by providing novel lessons and experiments that these schools might not have access to. As the Development Manager, I organize and oversee fundraising events like raffle baskets, resteraunt collaborations, and our annual 5k.</p>
-</section>
-</section>
-<section id="current-obsessions" class="level1">
-<h1>Current Obsessions</h1>
-<p>This is a small section to share an ever updating list of my current obsessions.</p>
-<p>Last Updated: 2026-05-31</p>
-<section id="current-favorite-songs" class="level3">
-<h3 class="anchored" data-anchor-id="current-favorite-songs">Current Favorite Songs</h3>
-<ul>
-<li>Olivia Rodrigo: The Cure</li>
-<li>Say Now: Millions-Unplugged</li>
-<li>Untouched: The Veronicas</li>
-</ul>
-</section>
-<section id="movies-im-excited-for" class="level3">
-<h3 class="anchored" data-anchor-id="movies-im-excited-for">Movies I’m Excited For</h3>
-<ul>
-<li>Backrooms, Directed by Kane Parsons</li>
-<li>Stop that Train, Directed by Adam Shankman</li>
-<li>The Hunger Games Sunrise On the Reaping, Directed by Francis Lawrence</li>
-</ul>
-</section>
-<section id="trader-joes-finds" class="level3">
-<h3 class="anchored" data-anchor-id="trader-joes-finds">Trader Joe’s Finds</h3>
-<ul>
-<li>Brookie Caramel Candy Clusters</li>
-<li>Italian-Style Wedding Soup</li>
-<li>Frozen Kimbap</li>
-</ul>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="S29yZWFu" data-listing-file-modified-sort="1780595746402" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<a href="./Reviews/Hangawi/Hangawi.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./Reviews/Hangawi/Hangawi.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Hangawi
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('S29yZWFu'); return false;">Korean</div>
+
+</div>
+<div class="card-text listing-description delink">
+
+
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -693,38 +646,6 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":true,"openEffect":"fade","selector":".lightbox","skin":"styles.css"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

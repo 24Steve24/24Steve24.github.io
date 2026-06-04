@@ -10,7 +10,7 @@ website:
         text: Home
       - about.qmd
       - Projects.qmd
-      - Recipe_Page.qmd
+      - Reviews.qmd
       - Resume.qmd
 
 format:

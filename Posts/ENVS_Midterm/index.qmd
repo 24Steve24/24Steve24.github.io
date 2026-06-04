@@ -140,4 +140,4 @@ There was a moderate effect **($\eta^2$ = 0.102)** of habitat type on BQCV loads
 
 [ENVS 193DS Midterm](Midterm.pdf)
 
-<iframe src="midterm.pdf" width  ="85%" height="500px"></iframe>
+<iframe src="Midterm.pdf" width ="85%" height="500px"></iframe>
