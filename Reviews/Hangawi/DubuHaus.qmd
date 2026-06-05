@@ -1,6 +1,8 @@
 ---
 title: "DubuHaus"
-format: html
+author:
+  - name: Stephen Bond
+date: "2026/03/25"
 categories: [Korean]
 image: DubuHaus.png
 draft: false
