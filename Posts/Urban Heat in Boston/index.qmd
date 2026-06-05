@@ -1,5 +1,9 @@
 ---
 title: "Boston's Heat, Vulnerable Communities, and Open Space"
+author: 
+  - name: Stephen Bond
+    affiliation: UCSB Environmental Studies
+date: "2026/06/04"
 categories: [GIS]
 image: Boston.jpg
 draft: false

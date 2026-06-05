@@ -3,6 +3,7 @@ title: "ENVS Statistics Midterm"
 author: 
   - name: Stephen Bond
     affiliation: UCSB Environmental Studies
+date: "2026/06/04"
 categories: [Coding]
 image: bee.jpeg
 draft: false

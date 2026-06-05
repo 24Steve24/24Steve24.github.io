@@ -1,6 +1,9 @@
 ---
 title: "Reenvisioning Recycling"
-format: html
+author:
+  - name: Stephen Bond
+    affiliation: UCSB Environmental Studies
+date: "2026/06/04"
 categories: [ELI]
 image: Plastic_Film.jpg
 draft: false
