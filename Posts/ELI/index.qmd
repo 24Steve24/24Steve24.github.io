@@ -44,7 +44,7 @@ library(here) # locate files
 Plastic <- read_csv(here("Posts", "ELI", "ELI_Map.csv")) |>
             clean_names()
 
-# set colors
+# set colors blue for pick up and coral for drop off
 pal <- colorFactor(
   palette = c("skyblue", "coral"),
   levels = c("Pick Up", "Drop Off"))
@@ -56,14 +56,14 @@ leaflet(data = Plastic) |>
   
   # interactive marker that show location in popup
   addCircleMarkers(~latitude,
-             ~longitude,
-             color = ~pal(type_of_location),
-             fillColor = ~pal(type_of_location),
-             fill = TRUE,
-             radius = 8,
-             fillOpacity = 1,
-             stroke = FALSE,
-             popup = ~paste(location, "<br>", type_of_location)) |>
+             ~longitude, # set marker data
+             color = ~pal(type_of_location), # set colors based on type
+             fillColor = ~pal(type_of_location),# fill colors based on type
+             fill = TRUE, # fill markers
+             radius = 8, # set size
+             fillOpacity = 1, # set opacity
+             stroke = FALSE, # no stroke
+             popup = ~paste(location, "<br>", type_of_location)) |> # pop up based and legend based on location tye
   #add legend for colors
   addLegend(
     pal = pal,
