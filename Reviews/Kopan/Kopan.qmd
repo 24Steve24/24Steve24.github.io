@@ -4,7 +4,8 @@ author:
   - name: Stephen Bond
 date: "2025/09/17"
 categories: [Korean]
-image: Kopan Logo.png
+image: Kopan_Logo.png
+image-height: "100px"
 draft: false
 ---
 
@@ -22,7 +23,7 @@ During my visit, I tried the kimchi bulgogi hotteok with sriracha and sesame see
 
 ![Kopan Kimchi Bulgogi Hotteok ](Hotteok.png){ .lightbox width="70%" fig-align="center"}
 
-# Overall Review
+## Overall Review
 
 When I say this was the best Korean food I had in Copenhagen, you have to believe me. The warm sweet pastry mixed with the savory and tangy after notes of the bulgogi and kimchi were perfect for a rainy day. I have to rate Kopan Street 5 stars.
 
