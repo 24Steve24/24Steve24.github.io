@@ -1,5 +1,5 @@
 ---
-title: "Resteraunt Reviews"
+title: "Restaurant Reviews"
 listing:
   contents: Reviews
   sort: "date desc"
